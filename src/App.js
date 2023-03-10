@@ -1,8 +1,8 @@
 import './App.css';
 
 function App() {
-  const name = '리액트2';
-  return <div> {name === '리액트' && <h1> 리액트입니다-AND연산자</h1> }</div>
+  const name = undefined;
+  return name || '값이 undefined 입니다.'; // 값이 거짓이어도 뒤에를 체크해야 된다.
 }
 
 export default App;
