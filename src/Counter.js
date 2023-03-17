@@ -17,18 +17,15 @@ class Counter extends Component {
                 <h2> 바뀌지 않는 값 : {fixedNumber}</h2>
                 <button
                     onClick = {() =>{
-                        this.setState((prevState) => {
-                            return{
-                                number:prevState.number+1
-                            }
-                        });
-                        //setState메서드에 의해서만 state(number)
-                        //값 변경 가능
-                        this.setState((prevState) => {
-                            return{
-                                number:prevState.number+1
-                            }
-                        });
+                       this.setState(
+                        {
+                            number: number+1
+                        },
+                        () => {
+                            console.log('방금 setState가 호출되었습니다.')
+                            console.log(this.state)
+                        }
+                       )
                     }
                 }
                 >
